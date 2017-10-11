@@ -1,16 +1,28 @@
+import com.sun.org.apache.regexp.internal.RE;
+
 public class CalculatorTest {
     public static void main(String[] args) {
-        Rectangle rectangle1 = new Rectangle(5,8);
-        double obwodProstokata = ShapeCalculator.rectanglePerimeter(rectangle1);
-        double poleProstokata = ShapeCalculator.rectangleArea(rectangle1);
 
-        Circle circle1 = new Circle(10);
-        double obowodKola = ShapeCalculator.circlePerimeter(circle1);
-        double poleKola = ShapeCalculator.circleArea(circle1);
+        Shape[] allShapes = new Shape[4];
+        allShapes[0] = new Rectangle(5, 8);
+        allShapes[1] = new Rectangle(10, 8);
+        allShapes[2] = new Circle(10);
+        allShapes[3] = new Circle(13.5);
 
-        System.out.println("Pole prostokąta o bokach "+rectangle1.getSideA()+", "+rectangle1.getSideB()+" wynosi "+poleProstokata);
-        System.out.println("Obwod prostokąta o bokach "+rectangle1.getSideA()+", "+rectangle1.getSideB()+" wynosi "+obwodProstokata);
-        System.out.println("Pole trojkata o promieniu "+circle1.getRadius()+" wynosi "+poleKola);
-        System.out.println("Obwod trojkata o promieniu "+circle1.getRadius()+" wynosi "+obowodKola);
+        for (int i = 0; i<allShapes.length;i++)  {
+            if (allShapes[i] instanceof Rectangle) {
+                double obwodProstokata = ShapeCalculator.rectanglePerimeter(((Rectangle) allShapes[i]));
+                double poleProstokata = ShapeCalculator.rectangleArea(((Rectangle) allShapes[i]));
+                System.out.println("Pole prostokąta o bokach " + ((Rectangle) allShapes[i]).getSideA() + ", " + ((Rectangle) allShapes[i]).getSideB() + " wynosi " + poleProstokata);
+                System.out.println("Obwod prostokąta o bokach " + ((Rectangle) allShapes[i]).getSideA() + ", " + ((Rectangle) allShapes[i]).getSideB() + " wynosi " + obwodProstokata);
+            } else if (allShapes[i] instanceof Circle) {
+                double obwodKola = ShapeCalculator.circlePerimeter(((Circle) allShapes[i]));
+                double poleKola = ShapeCalculator.circleArea(((Circle) allShapes[i]));
+                System.out.println("Pole trojkata o promieniu " + ((Circle) allShapes[i]).getRadius() + " wynosi " + poleKola);
+                System.out.println("Obwod trojkata o promieniu " + ((Circle) allShapes[i]).getRadius() + " wynosi " + obwodKola);
+            } else {
+                System.out.println("Brak obliczen");
+            }
+        }
     }
 }

@@ -1,13 +1,14 @@
 public class SchoolPeople {
-    String firstName;
-    String lastName;
+    private String firstName;
+    private String lastName;
 
     public SchoolPeople(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public  SchoolPeople (){}
+    public SchoolPeople() {
+    }
 
     public String getFirstName() {
         return firstName;
@@ -25,7 +26,7 @@ public class SchoolPeople {
         this.lastName = lastName;
     }
 
-    public void show (){
-        System.out.println(firstName+ " "+lastName);
+    public void show() {
+        System.out.println(firstName + " " + lastName);
     }
 }

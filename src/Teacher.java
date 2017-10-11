@@ -1,6 +1,6 @@
 public class Teacher extends SchoolPeople {
-    String course;
-    double tenure;
+    private String course;
+    private double tenure;
 
     public Teacher(String firstName, String lastName, String course, double tenure) {
         super(firstName, lastName);

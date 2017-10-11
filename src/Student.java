@@ -1,6 +1,6 @@
 public class Student extends SchoolPeople {
-    int nrIndeksu;
-    int yearOfStudies;
+    private int nrIndeksu;
+    private int yearOfStudies;
 
     public Student(String firstName, String lastName, int nrIndeksu, int yearOfStudies) {
         super(firstName, lastName);

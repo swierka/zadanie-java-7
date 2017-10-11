@@ -15,21 +15,21 @@ public class CalendarConverter {
         String dayString;
 
         switch (dayNumber) {
-            case 1:
+            case MONDAY:
                 dayString = "Poniedziałek";
                 break;
-            case 2:
+            case TUESDAY:
                 dayString = "Wtorek";
                 break;
-            case 3:
+            case WEDNESDAY:
                 dayString = "Sroda";
                 break;
-            case 4:
+            case THURSDAY:
                 dayString = "Czwartek";
                 break;
-            case 5:
+            case FRIDAY:
                 dayString = "Piątek";
-            case 6:
+            case SATURDAY:
                 dayString = "Sobota";
                 break;
             default:
